@@ -4,10 +4,15 @@ const Registry = require('./lib/registry.js')
 const Server = require('./lib/mdns-server.js')
 const Browser = require('./lib/browser.js')
 
+function Bonjour (opts, error) {
+  if (!(this instanceof Bonjour)) return new Bonjour(opts, error)
 
-function Bonjour (opts) {
-  if (!(this instanceof Bonjour)) return new Bonjour(opts)
-  this._server = new Server(opts)
+  if (typeof opts === 'function') {
+    error = opts
+    opts = undefined
+  }
+
+  this._server = new Server(opts, error)
   this._registry = new Registry(this._server)
 }
 
