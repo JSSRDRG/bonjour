@@ -1,10 +1,9 @@
 'use strict'
 
-var Registry = require('./lib/registry')
-var Server = require('./lib/mdns-server')
-var Browser = require('./lib/browser')
+const Registry = require('./lib/registry.js')
+const Server = require('./lib/mdns-server.js')
+const Browser = require('./lib/browser.js')
 
-module.exports = Bonjour
 
 function Bonjour (opts) {
   if (!(this instanceof Bonjour)) return new Bonjour(opts)
@@ -25,7 +24,7 @@ Bonjour.prototype.find = function (opts, onup) {
 }
 
 Bonjour.prototype.findOne = function (opts, cb) {
-  var browser = new Browser(this._server.mdns, opts)
+  const browser = new Browser(this._server.mdns, opts)
   browser.once('up', function (service) {
     browser.stop()
     if (cb) cb(service)
@@ -37,3 +36,5 @@ Bonjour.prototype.destroy = function () {
   this._registry.destroy()
   this._server.mdns.destroy()
 }
+
+module.exports = Bonjour
