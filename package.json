@@ -1,6 +1,6 @@
 {
   "name": "bonjour",
-  "version": "3.5.0",
+  "version": "3.5.1",
   "description": "A Bonjour/Zeroconf implementation in pure JavaScript",
   "main": "index.js",
   "dependencies": {
@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "after-all": "^2.0.2",
-    "standard": "^7.0.1",
+    "standard": "^14.3.4",
     "tape": "^4.5.1"
   },
   "scripts": {
