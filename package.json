@@ -7,14 +7,14 @@
     "array-flatten": "^2.1.0",
     "deep-equal": "^1.0.1",
     "dns-equal": "^1.0.0",
-    "dns-txt": "^2.0.2",
+    "dns-txt": "git+https://github.com/JSSRDRG/dns-txt.git",
     "multicast-dns": "^6.1.1",
     "multicast-dns-service-types": "^1.1.0"
   },
   "devDependencies": {
     "after-all": "^2.0.2",
-    "standard": "^14.3.4",
-    "tape": "^4.5.1"
+    "standard": "^16.0.3",
+    "tape": "^5.0.1"
   },
   "scripts": {
     "test": "standard && tape test/*.js"
