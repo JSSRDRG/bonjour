@@ -1,13 +1,13 @@
 {
   "name": "bonjour",
-  "version": "3.6.0",
+  "version": "3.6.1",
   "description": "A Bonjour/Zeroconf implementation in pure JavaScript",
   "main": "index.js",
   "dependencies": {
-    "deep-equal": "^1.0.1",
+    "deep-equal": "^2.0.5",
     "dns-equal": "^1.0.0",
     "dns-txt": "git+https://github.com/JSSRDRG/dns-txt.git",
-    "multicast-dns": "^6.1.1",
+    "multicast-dns": "^6.2.3",
     "multicast-dns-service-types": "^1.1.0"
   },
   "devDependencies": {
